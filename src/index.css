@@ -16,3 +16,49 @@ body {
 .Navitem {
   color: black;
 }
+
+.First {
+  height: 200px;
+}
+
+.Second {
+  height: 200px;
+}
+
+.Third {
+  height: 100px;
+}
+
+.Forth {
+  height: 500px;
+}
+
+.Fifth {
+  height: 200px;
+}
+
+@media screen and (max-width: 576px) {
+  .Third {
+    height: 100px;
+  }
+
+  .Forth {
+    height: 500px;
+    top: 100px;
+    position: relative;
+  }
+
+  .Fifth {
+    height: 100px;
+    position: relative;
+    top: -500px;
+  }
+}
+
+.Sixth {
+  height: 400px;
+}
+
+.Seventh {
+  height: 400px;
+}
