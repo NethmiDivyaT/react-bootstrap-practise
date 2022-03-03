@@ -1,0 +1,13 @@
+/*Search Icon*/
+.searchI {
+  background-color: #f4f6f5 !important;
+}
+
+.Navitem:hover {
+  background-color: rgb(7, 99, 53);
+}
+
+/*Nav Items*/
+.Navitem {
+  color: black;
+}
