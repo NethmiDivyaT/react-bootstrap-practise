@@ -1,0 +1,41 @@
+.Container {
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.card1 {
+  border-radius: 30px;
+  border-color: blue;
+}
+
+.card2 {
+  border-radius: 30px;
+  border-color: red;
+}
+
+.card3 {
+  border-radius: 30px;
+  border-color: green;
+}
+
+.card4 {
+  border-radius: 30px;
+  border-color: yellow;
+}
+
+.card1:hover,
+.card2:hover,
+.card3:hover,
+.card4:hover {
+  border: 3px solid black;
+}
+
+.img {
+  border-radius: 30px 30px 60px 0px;
+  width: auto;
+  height: 200px;
+}
+
+.title {
+  text-align: center;
+}
