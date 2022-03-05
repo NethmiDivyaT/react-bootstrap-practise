@@ -3,7 +3,7 @@ import { Container, Col, Row } from 'react-bootstrap'
 
 function Grid() {
     return (
-        <Container fluid>
+        <Container>
           <Row>
             <Col md={6} xs={12} style={{backgroundColor: "pink"}} className="First">A</Col>
             <Col md={6} xs={12} style={{backgroundColor: "blue"}} className="Second">B</Col>

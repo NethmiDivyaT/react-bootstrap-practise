@@ -3,7 +3,7 @@ import { Card, Col, Container, Row } from 'react-bootstrap';
 import img1 from "../Assert/1.jpg";
 import img2 from "../Assert/4.jpg";
 import img3 from "../Assert/bg.jpg";
-import img4 from "../Assert/Room3.jpg";
+import img4 from "../Assert/about1.jpg";
 
 function CardView() {
     return (
