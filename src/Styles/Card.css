@@ -3,49 +3,83 @@
   margin-bottom: 5%;
 }
 
-.card1 {
+.card {
   border-radius: 30px;
-  border-color: blue;
+  max-width: 270px;
+  box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.34);
+  transition: transform 0.4s;
 }
 
-.card2 {
-  border-radius: 30px;
-  border-color: red;
-}
-
-.card3 {
-  border-radius: 30px;
-  border-color: green;
-}
-
-.card4 {
-  border-radius: 30px;
-  border-color: yellow;
-}
-
-.card1:hover,
-.card2:hover,
-.card3:hover,
-.card4:hover {
+.card:hover {
   border: 3px solid black;
+  transform: scale(1.1);
+  border: 2px solid #f47925;
+  cursor: pointer;
 }
 
 .img {
-  border-radius: 30px 30px 60px 0px;
+  border-radius: 30px 30px 0px 60px;
   width: auto;
-  height: 200px;
+  height: 150px;
 }
 
 .title {
   text-align: center;
+  font-family: Gilroy;
+  font-size: 17px;
+  color: #f47925;
+  font-weight: 600;
+}
+
+.content {
+  text-align: center;
+}
+
+button {
+  background-color: #f47925;
+  color: aliceblue;
+  border-radius: 15px;
+  border: #f47925;
+  width: 60px;
+  height: 40px;
+  display: flex;
+  margin-left: auto;
+  margin-top: -15px;
+  margin-bottom: 3%;
+  align-items: center;
+  justify-content: center;
+}
+
+.fa-star-half-o,
+.fa-star,
+.fa-star-o {
+  color: #f47925;
+  justify-content: space-between;
+  margin-left: 3px;
+}
+
+.count {
+  color: #f47925;
+  font-size: 16px;
+  margin-left: 5%;
+  font-style: normal;
+  font-weight: 800;
+}
+
+.footergroup {
+  margin-top: 5%;
+}
+
+.iconName {
+  margin-right: 10%;
+  margin-left: 3%;
+  margin-top: -100px;
+  font-style: normal;
 }
 
 @media screen and (max-width: 576px) {
-  .card1,
-  .card2,
-  .card3,
-  .card4 {
-    width: min-content;
+  .card {
+    width: 75%;
     margin: auto;
     margin-bottom: 5%;
   }
