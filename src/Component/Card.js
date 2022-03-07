@@ -46,7 +46,7 @@ function CardView() {
               <button>$15</button>
                 <Card.Title className='title'>Modern Cloud Based Application Development</Card.Title>
                 <Card.Text className="content">
-                  Start buildning of modern software application in the cloud.
+                  Start buildning of software application in the cloud.
                 </Card.Text>
                 <span>
                   <i class="fa fa-star" aria-hidden="true"></i>
