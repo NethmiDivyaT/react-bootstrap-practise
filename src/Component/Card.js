@@ -14,8 +14,10 @@ function CardView() {
     return (
     <Container className='Container'>
         <Carousel controls="true" className='Carousel'>
-        <Carousel.Item className="itemC">
-        <Row xs={1} md={4}>
+          <Carousel.Item className="itemC">
+            {/**Row1 */}
+            <Row xs={1} md={4}>
+              {/**Card1 */}
           <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img1} className="img" />
@@ -43,7 +45,8 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-            </Col>
+              </Col>
+              {/**Card2 */}
             <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img2} className="img" />
@@ -71,7 +74,8 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-            </Col>
+              </Col>
+              {/**Card3 */}
             <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img3} className="img" />
@@ -99,7 +103,8 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-            </Col>
+              </Col>
+              {/**Card4 */}
             <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img4} className="img" />
@@ -129,9 +134,11 @@ function CardView() {
              </Card>
             </Col>
             </Row>
-  </Carousel.Item>
-  <Carousel.Item className='itemC'>
-  <Row xs={1} md={4}>
+          </Carousel.Item>
+          <Carousel.Item className='itemC'>
+            {/**Row1 */}
+          <Row xs={1} md={4}>
+           {/**Card1 */} 
           <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img5} className="img" />
@@ -160,7 +167,8 @@ function CardView() {
 
               </Card.Body>
             </Card>
-            </Col>
+              </Col>
+              {/**Card2 */}
             <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img6} className="img" />
@@ -189,6 +197,7 @@ function CardView() {
               </Card.Body>
             </Card>
             </Col>
+              {/**Card3 */}
             <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img7} className="img" />
@@ -217,6 +226,7 @@ function CardView() {
               </Card.Body>
             </Card>
             </Col>
+            {/**Card4 */}
             <Col>
             <Card className='card'>
               <Card.Img variant="top" src={img8} className="img" />
@@ -246,9 +256,9 @@ function CardView() {
              </Card>
             </Col>
             </Row>
-  </Carousel.Item>
-</Carousel>
-</Container>
+    </Carousel.Item>
+    </Carousel>
+    </Container>
     );
   }
   
