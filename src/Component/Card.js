@@ -1,5 +1,5 @@
 import '../Styles/Card.css';
-import { Card, Carousel, Col, Container, Row } from 'react-bootstrap';
+import { Card, Col, Container, Row } from 'react-bootstrap';
 import 'font-awesome/css/font-awesome.min.css';
 import img1 from "../Assert/img1.jpeg";
 import img2 from "../Assert/img2.jpg";
@@ -9,17 +9,28 @@ import img5 from "../Assert/img5.jfif";
 import img6 from "../Assert/img6.jpg";
 import img7 from "../Assert/img7.png";
 import img8 from "../Assert/img8.jfif";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-function CardView() {
-    return (
-    <Container className='Container'>
-        <Carousel controls="true" className='Carousel'>
-          <Carousel.Item className="itemC">
-            {/**Row1 */}
-            <Row xs={1} md={4}>
-              {/**Card1 */}
-          <Col>
-            <Card className='card'>
+
+export default function App() {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4
+    },
+    mobile: {
+      breakpoint: { max: 576, min: 0 },
+      items: 1
+    }
+  };
+  return (
+    <div className="App">
+      <div style={{ position: "relative" }}>
+        <Carousel responsive={responsive} className="Carousel">
+         { /**Card1 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img1} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -45,10 +56,10 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-              </Col>
-              {/**Card2 */}
-            <Col>
-            <Card className='card'>
+            { /**Card2 */}
+          </div>
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img2} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -74,10 +85,10 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-              </Col>
-              {/**Card3 */}
-            <Col>
-            <Card className='card'>
+          </div>
+          { /**Card3 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img3} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -103,10 +114,10 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-              </Col>
-              {/**Card4 */}
-            <Col>
-            <Card className='card'>
+          </div>
+          { /**Card4 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img4} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -132,15 +143,10 @@ function CardView() {
                 </div>
               </Card.Body>
              </Card>
-            </Col>
-            </Row>
-          </Carousel.Item>
-          <Carousel.Item className='itemC'>
-            {/**Row1 */}
-          <Row xs={1} md={4}>
-           {/**Card1 */} 
-          <Col>
-            <Card className='card'>
+          </div>
+          { /**Card5 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img5} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -164,13 +170,12 @@ function CardView() {
                   <i class="fa fa-download" aria-hidden="true"></i>
                   <i className='iconName'>54</i>
                 </div>
-
               </Card.Body>
             </Card>
-              </Col>
-              {/**Card2 */}
-            <Col>
-            <Card className='card'>
+          </div>
+          { /**Card6 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img6} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -196,10 +201,10 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-            </Col>
-              {/**Card3 */}
-            <Col>
-            <Card className='card'>
+          </div>
+          { /**Card7 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img7} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -225,10 +230,10 @@ function CardView() {
                 </div>
               </Card.Body>
             </Card>
-            </Col>
-            {/**Card4 */}
-            <Col>
-            <Card className='card'>
+          </div>
+          { /**Card8 */}
+          <div class="carouselCard">
+          <Card className='card'>
               <Card.Img variant="top" src={img8} className="img" />
               <Card.Body>
               <button>$15</button>
@@ -254,12 +259,9 @@ function CardView() {
                 </div>
               </Card.Body>
              </Card>
-            </Col>
-            </Row>
-    </Carousel.Item>
-    </Carousel>
-    </Container>
-    );
-  }
-  
-  export default CardView;
+          </div>
+        </Carousel>
+      </div>
+    </div>
+  );
+}
