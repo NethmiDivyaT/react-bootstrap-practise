@@ -1,0 +1,44 @@
+.footer {
+  background: linear-gradient(113.49deg, #53acb7 -30.3%, #07072b 58.12%);
+  padding-top: 50px;
+}
+
+.comdes {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+h6 {
+  font-family: "Poppins";
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 30px;
+  color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.copyright {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  padding-bottom: 100px;
+}
+
+.link {
+  color: #ffffff;
+}
+
+.icon {
+  color: rgba(255, 255, 255, 0.5);
+}
