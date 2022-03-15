@@ -2,19 +2,17 @@ import React from 'react';
 import '../Styles/typehead.css'
 import { Container, FormGroup, Form, Spinner} from 'react-bootstrap';
 import 'react-bootstrap-typeahead/css/Typeahead.css';
-import {Typeahead, ClearButton} from 'react-bootstrap-typeahead';
+import { Typeahead, ClearButton } from 'react-bootstrap-typeahead';
 
 import options from './data';
 
 const BasicExample = () => {
     return (
-        <Container className='container'>
-          <Form>
-            <FormGroup>
+      <Container className='container'>
               <Typeahead
                 id="service"
                 options={options}
-                placeholder="Choose a Programming Language........">
+                placeholder="Choose a Language........">
                 {({ onClear, selected }) => (
                         <div className="rbt-aux">
                             {!!selected.length && <ClearButton onClick={onClear} size="lg" className='clear'/>}
@@ -22,8 +20,6 @@ const BasicExample = () => {
                         </div>
                         )}
                </Typeahead>
-            </FormGroup>
-            </Form>
         </Container>
     );
   };
