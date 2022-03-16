@@ -8,8 +8,6 @@ import options from './data';
 
 const BasicExample = () => {
   return (
-      <div className='bg'>
-      <Form.Group className='container'>
         <Typeahead
           className='typehead'
           id="basic-typeahead-single"
@@ -21,10 +19,7 @@ const BasicExample = () => {
                       {!selected.length && <Spinner animation="grow" size="sm" />}
                   </div>
           )}
-          </Typeahead>
-      </Form.Group>
-      </div>
-      
+          </Typeahead> 
     );
   };
 
