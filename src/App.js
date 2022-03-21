@@ -9,7 +9,7 @@ import Gallery from "./Component/UnsplashImage";
 function App() {
   return (
     <>
-
+    <Gallery/>
     </>
   );
 }

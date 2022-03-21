@@ -1,70 +1,67 @@
-import React from "react";
-import { Loader } from "react-bootstrap-typeahead";
-import { render } from "react-dom";
-import InfiniteScroll from "react-infinite-scroll-component";
+import React, { useState, useEffect } from 'react';
+import { Loader } from './Loader';
 import axios from 'axios';
-import '../Styles/Gallery.css';
+import InfiniteScroll from 'react-infinite-scroll-component';
 
-  const UnsplashImage = ({ url, key }) => (
-    <div className="image-item" key={key} >
-      <img src={url} />
+import styled from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
+
+// Style
+const GlobalStyle = createGlobalStyle`
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    font-family: sans-serif;
+  }
+`;
+
+const WrapperImages = styled.section`
+  max-width: 70rem;
+  margin: 4rem auto;
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 300px;
+  transition: transform 0.4s;
+`;
+
+function App() {
+  const [images, setImage] = useState([]);
+
+  useEffect(() => {
+    fetchImages();
+  }, [])
+
+  const fetchImages = () => {
+    
+    axios
+      .get(`http://localhost:3000/posts?&_limit=20`)
+      .then(res => {
+        setImage([...images, ...res.data]);
+      })
+  }
+
+
+  return (
+    <div>
+      <GlobalStyle />
+      <InfiniteScroll
+        dataLength={images.length}
+        next={fetchImages}
+        hasMore={true}
+        loader={<Loader />}
+      >
+         <WrapperImages>
+        {images.map(image => (
+            <img src={image.url} height="250px" width="250px" />
+        ))}
+          </WrapperImages>
+      </InfiniteScroll>
     </div>
   );
-  
+}
 
-  let Collage = () => {
-    const [images, setImages] = React.useState([]);
-    const [loaded, setIsLoaded] = React.useState(false);
-  
-    React.useEffect(() => {
-      fetchImages();
-    }, []);
-  
-    const fetchImages = (count = 10) => {
-      const apiRoot = "https://api.unsplash.com";
-      const accessKey =
-        "ffTaIG8uGsVZfSrdUp7kArv89BzN3U8q0VAQzPRZDis";
-  
-      axios
-        .get(`${apiRoot}/photos/random?client_id=${accessKey}&count=${count}`)
-        .then(res => {
-          setImages([...images, ...res.data]);
-          setIsLoaded(true);
-  
-          console.log(images);
-        });
-    };
-  
-    return (
-      <div className="hero is-fullheight is-bold is-info">
-        <div className="hero-body">
-          <div className="container">
-  
-            <InfiniteScroll
-              dataLength={images}
-              next={() => fetchImages(5)}
-              hasMore={true}
-              loader={
-                <Loader
-                />
-              }
-            >
-              <div className="image-grid" style={{ marginTop: "30px" }}>
-                {loaded
-                  ? images.map((image, index) => (
-                      <UnsplashImage
-                        url={image.urls.regular}
-                        key={index}
-                      />
-                    ))
-                  : ""}
-              </div>
-            </InfiniteScroll>
-          </div>
-        </div>
-      </div>
-    );
-  };
-  
-render(<Collage />, document.getElementById("root"));
-  
+export default App;
