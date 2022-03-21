@@ -1,6 +1,14 @@
 @media screen and (max-width: 576px) {
   .img {
-    padding-left: 110px;
+    margin: auto;
+    padding-left: 17%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .img {
+    margin: auto;
+    padding-left: 15%;
   }
 }
 

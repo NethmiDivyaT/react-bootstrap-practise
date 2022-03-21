@@ -4,7 +4,6 @@ import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import '../Styles/Unsplash.css';
 
-import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
 
 // Style
@@ -30,7 +29,7 @@ function App() {
   const fetchImages = () => {
     
     axios
-      .get(`https://github.com/NethmiDivyaT/react-bootstrap-practise/blob/48020f26d2c5e0c8ba4c056bbf56c59bc9ac8ad9/db.json?&_limit=20`)
+      .get(`https://mocki.io/v1/f3e9dca4-e44d-409a-a66a-5675f6fc481b?&_limit=20`)
       .then(res => {
         setImage([...images, ...res.data]);
       })
