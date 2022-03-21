@@ -30,7 +30,7 @@ function App() {
   const fetchImages = () => {
     
     axios
-      .get(`http://localhost:3000/posts?&_limit=20`)
+      .get(`https://github.com/NethmiDivyaT/react-bootstrap-practise/blob/48020f26d2c5e0c8ba4c056bbf56c59bc9ac8ad9/db.json?&_limit=20`)
       .then(res => {
         setImage([...images, ...res.data]);
       })
