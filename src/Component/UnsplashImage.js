@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Loader } from './Loader';
 import axios from 'axios';
 import InfiniteScroll from 'react-infinite-scroll-component';
+import '../Styles/Unsplash.css';
 
 import styled from 'styled-components';
 import { createGlobalStyle } from 'styled-components';
@@ -18,15 +19,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-const WrapperImages = styled.section`
-  max-width: 70rem;
-  margin: 4rem auto;
-  display: grid;
-  grid-gap: 1em;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  grid-auto-rows: 300px;
-  transition: transform 0.4s;
-`;
 
 function App() {
   const [images, setImage] = useState([]);
@@ -54,11 +46,11 @@ function App() {
         hasMore={true}
         loader={<Loader />}
       >
-         <WrapperImages>
+         <div class="img">
         {images.map(image => (
             <img src={image.url} height="250px" width="250px" />
         ))}
-          </WrapperImages>
+          </div>
       </InfiniteScroll>
     </div>
   );
